@@ -3,6 +3,7 @@ import Dropdown from './components/Dropdown';
 //import Search from './components/Search';
 //import Accordion from './components/Accordion';
 //import Counter from './components/Counter';
+import Translate from './components/Translate';
 
 //const items = [
 //    {
@@ -19,36 +20,27 @@ import Dropdown from './components/Dropdown';
 //    }
 //]
 
-const options = [
-    {
-        label: 'The Color Red',
-        value: 'red'
-    },
-    {
-        label: 'The Color Green',
-        value: 'green'
-    },
-    {
-        label: 'A Shade of Blue',
-        value: 'blue'
-    }
-];
+//const options = [
+//    {
+//        label: 'The Color Red',
+//        value: 'red'
+//    },
+//    {
+//        label: 'The Color Green',
+//        value: 'green'
+//    },
+//    {
+//        label: 'A Shade of Blue',
+//        value: 'blue'
+//    }
+//];
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
-    const [selected, setSelected] = useState(options[0]);
-    const [showDropdown, setShowDropdown] = useState(true);
 
     return (
         <div>
-            <button onClick={() => setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
-            {showDropdown ?
-                   <Dropdown 
-                    selected={selected} 
-                    onSelectedChange={setSelected}
-                    options={options} 
-                 /> : null
-            }
+           <Translate />
         </div>
     );
 };
